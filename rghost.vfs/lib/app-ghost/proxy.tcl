@@ -307,7 +307,9 @@ proc read_first {log_num local} {
                     dlog "Random download ratio is: $down_ratio"
                     dlog "Random upload ratio is: $up_ratio"
 
-                    set uploaded [expr {$reported_previous_up + ($down_ratio * $actual_previous_down_diff) + ($up_ratio * $actual_previous_up_diff)}]
+                    set uploaded [expr {$reported_previous_up + $actual_previous_up_diff}]
+                    set uploaded [expr {$uploaded + ($down_ratio * $actual_previous_down_diff)]
+                    set uploaded [expr {$uploaded + ($up_ratio * $actual_previous_up_diff)}]
 
                     dlog "Time from last report was: $elapsed_time"
                     dlog "Rolling for boost."
