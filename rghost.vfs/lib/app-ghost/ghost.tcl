@@ -15,8 +15,8 @@
 #   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-set build 520
-set version 0.16
+set build 521
+set version 0.17
 
 
 package provide app-ghost 1.0
