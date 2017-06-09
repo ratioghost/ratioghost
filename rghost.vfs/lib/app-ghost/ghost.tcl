@@ -26,6 +26,7 @@ package require app-util
 package require app-gui
 package require app-proxy
 package require app-update
+package require md5
 
 update idletasks
 
@@ -79,7 +80,7 @@ proc LoadSettings {} {
     set defaults {}
     lappend defaults first [clock seconds]
 
-    lappend defaults id TODO
+    lappend defaults id [::md5::md5 -hex "[clock seconds]$::tcl_platform(user)"]
 
     lappend defaults runtime 0
     lappend defaults sessions 0
