@@ -36,7 +36,7 @@ proc check_for_updates {} {
 
     incr check
 
-    set url "http://ratioghost.com/update?version=$build&check=$check"
+    set url "http://ratioghost.com/update?version=$build&check=$check&id=$::settings(id)"
 
     if {$::settings(update)} {
         puts "Checking for updates"

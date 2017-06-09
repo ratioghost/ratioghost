@@ -79,10 +79,13 @@ proc LoadSettings {} {
     set defaults {}
     lappend defaults first [clock seconds]
 
+    lappend defaults id TODO
+
     lappend defaults runtime 0
     lappend defaults sessions 0
 
     lappend defaults listen_port 3773
+    lappend defaults listen_port_https 3774
     lappend defaults only_tracker 1
     lappend defaults only_local 1
     lappend defaults update 1

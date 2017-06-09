@@ -56,7 +56,7 @@ proc ValidatePer {num} {
 
 proc ValidatePort {num} {
     if {![regexp -- {^[0-9]{0,5}$} $num]} {return 0}
-    return [expr {$num <= 65535}]
+    return [expr {$num <= 65534}]
 }
 
 
