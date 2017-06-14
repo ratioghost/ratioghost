@@ -44,7 +44,8 @@ proc bgerror {message} {
     if {$ProcessingError} return
     set ProcessingError 1
     set em "Background error: $message\n\n$::errorInfo"
-    tk_messageBox -title "Application Error" -message $em
+
+    #tk_messageBox -title "Application Error" -message $em
 
     logerror $em
 
